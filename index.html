@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="im?age/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Bento grid</title>
 
   <style>
@@ -13,240 +13,239 @@
     }
 
     *{
-        padding: 0px;
-        margin: 0px;
-        box-sizing: border-box;   
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{ 
-        background-color: rgb(235, 237, 240);
-        padding: 2%;
-        font-size: 18px;
-        font-family: "DM Sans", sans-serif;
-        font-weight: 500;
+    body{
+      background-color: rgb(235, 237, 240);
+      padding: 2%;
+      font-family: "DM Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
     }
 
     .grid-container{
-        padding: 10px;
-        max-width:1044px;
-        width: 100%;
-        min-height: 100vh;
-        display: grid;
-        grid-template-areas: 
-         "item-1  item-2  item-2  item-3"
-         "item-1  item-2  item-2  item-3"
-         "item-1  item-2  item-2  item-3"
-         "item-4  item-5  item-6  item-3"
-         "item-4  item-7  item-8  item-8"
-         "item-4  item-7  item-8  item-8";
-        gap: 0.75rem;
-        grid-template-columns: 0.6fr 0.6fr 0.6fr 0.6fr ;
-        grid-auto-rows :minmax(100px, auto);
-        margin: auto;
+      max-width: 1044px;
+      margin: auto;
+      display: grid;
+      gap: 0.75rem;
+      min-height: 100vh;
+      grid-template-columns: repeat(4, 0.6fr);
+      grid-template-areas:
+        "item-1 item-2 item-2 item-3"
+        "item-1 item-2 item-2 item-3"
+        "item-1 item-2 item-2 item-3"
+        "item-4 item-5 item-6 item-3"
+        "item-4 item-7 item-8 item-8"
+        "item-4 item-7 item-8 item-8";
     }
 
     .item-1{
-        grid-area:item-1;
-        background-color: hsl(31, 66%, 93%);
-        border-radius: 10px;
-        padding: 20px;
+      grid-area: item-1;
+      background: hsl(31, 66%, 93%);
+      border-radius: 10px;
+      padding: 20px;
     }
-
+    .item-1 i{
+      display: block;
+      color: hsl(256, 67%, 59%);
+    }
     .item-1 img{ margin-top: 30px; }
 
-    .item-1 i{
-        display: block;
-        color: hsl(256, 67%, 59%);
-    }
-
     .item-2{
-        grid-area: item-2;
-        background-color: hsl(256, 67%, 59%);
-        border-radius: 10px;
-        padding: 40px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      grid-area: item-2;
+      background: hsl(256, 67%, 59%);
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .item-2 span{ color: gold; }
+    .item-2 img{ margin-top: 20px; }
+    .item-2 h5{ margin-top: 20px; }
+
+    /* ITEM 3 */
+    .item-3{
+      grid-area: item-3;
+      background: hsl(254, 88%, 90%);
+      border-radius: 10px;
+      padding: 24px;
     }
 
-    .item-2 img { margin-top:20px; }
-    .item-2 span{ color: gold; }
-    .item-2 h1{ color: white; }
-    .item-2 h5{ color: white; margin-top: 20px; }
-
-    .item-3{
-        grid-area:item-3;
-        background-color: hsl(254, 88%, 90%);
-        border-radius: 10px;
-        padding: 24px;
-        font-size: 18px;
-        position: relative;
-        overflow: hidden;
+    .item-3 h2{
+      margin-bottom: 16px;
     }
 
     .item-3 img{
-        margin: 20px;
-        position: absolute;
-        left: 50px;
+      display: block;
+      margin: 16px auto;
+      width: 220px;
     }
 
-    .item-3 p{ margin-top: 250px; }
+    .item-3 p{
+      margin-top: 10px;
+    }
 
     .item-4{
-        grid-area:item-4;
-        background-color: hsl(39, 100%, 71%);
-        border-radius: 10px;
-        padding: 15px;
+      grid-area: item-4;
+      background: hsl(39, 100%, 71%);
+      border-radius: 10px;
+      padding: 15px;
     }
-
     .item-4 img{
-        margin-top: 20px;
-        margin-left: 20px;
+      margin-top: 20px;
+      margin-left: 20px;
     }
 
     .item-5{
-        grid-area:item-5;
-        background-color: hsl(0, 0%, 100%);
-        border-radius: 10px;
-        padding: 10px;
-        position: relative;
-        overflow: hidden;    
+      grid-area: item-5;
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      position: relative;
+      overflow: hidden;
     }
-
     .item-5 img{
-        height: auto;
-        position: absolute;
-        top: 10px;
-        right: -40px;
+      position: absolute;
+      right: -40px;
+      top: 10px;
     }
-
     .item-5 h2{ margin-top: 40px; }
 
     .item-6{
-        grid-area:item-6;
-        background-color: hsl(39, 100%, 71%);
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 15px;
-        position: relative;
-        overflow: hidden;
+      grid-area: item-6;
+      background: hsl(39, 100%, 71%);
+      border-radius: 10px;
+      padding: 10px;
+      position: relative;
+      overflow: hidden;
+      font-size: 15px;
     }
-
     .item-6 img{
-        position: absolute;
-        left: 10px;
+      position: absolute;
+      left: 10px;
     }
 
     .item-7{
-        grid-area:item-7;
-        background-color: hsl(0, 0%, 100%);
-        border-radius: 10px;
-        padding: 15px;
+      grid-area: item-7;
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      position: relative;
     }
-
     .item-7 h1{ font-size: 3rem; }
     .item-7 img{ margin-top: 10px; }
 
     .item-8{
-        grid-area:item-8;
-        background-color: hsl(256, 67%, 59%);
-        border-radius: 10px;
-        padding: 15px;
-        position: relative;
-        overflow: hidden;
+      grid-area: item-8;
+      background: hsl(256, 67%, 59%);
+      border-radius: 10px;
+      padding: 15px;
+      position: relative;
+      overflow: hidden;
+      color: white;
     }
-
-    .item-8 h2{
-        margin-left: 40%;
-        color: white;
-        margin-top: 20px;    
-    }
-
     .item-8 img{
-        position:absolute;
+      position: absolute;
+    }
+    .item-8 h2{
+      margin-left: 40%;
+      margin-top: 20px;
+    }
+
+  
+    @media (max-width: 42em){
+      .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "item-2"
+          "item-5"
+          "item-6"
+          "item-3"
+          "item-8"
+          "item-7"
+          "item-1"
+          "item-4";
+      }
+
+      
+      .item-6{
+        padding-bottom: 40px;
+      }
+
+      .item-6 img,
+      .item-5 img,
+      .item-8 img{
+        position: relative;
+        left: 0;
+        margin: 20px auto 0;
         display: block;
+      }
+
+      .item-8 h2{
+        margin-left: 0;
+      }
+
+      body{ font-size: 16px; }
     }
 
-    @media(max-width:42em){
-        .grid-container{
-            width: 100%;
-            height: auto;
-            grid-template-columns: 2fr;
-            grid-template-rows: 2.5fr;
-            grid-template-areas: 
-                "item-2"
-                "item-5"
-                "item-6"
-                "item-3"
-                "item-8"
-                "item-7"
-                "item-1"
-                "item-4";
-        }
-        body{ font-size: 16px; }
-    }    
-
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none; }
-    }
-
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-    .attribution a {
-      color: hsl(228, 45%, 44%);
+    @media (prefers-reduced-motion: reduce){
+      *{ animation: none; }
     }
   </style>
 </head>
 
 <body>
-
   <div class="grid-container">
+
     <div class="item-1">
       <h1>Create and schedule content <i>quicker.</i></h1>
-      <img src="./assets/images/illustration-create-post.webp" style="width:200px;" alt="illustration-create-post">
+      <img src="./assets/images/illustration-create-post.webp" width="200">
     </div>
 
     <div class="item-2">
-      <h1>Social Medeia <span> 10x </span><br><i>Faster </i> with AI</h1>
-      <img src="./assets/images/illustration-five-stars.webp" style="width:200px" alt="illustration-five-stars">
-      <h5>Over 4,000-5 star reviews</h5>
+      <h1>Social Media <span>10x</span><br><i>Faster</i> with AI</h1>
+      <img src="./assets/images/illustration-five-stars.webp" width="200">
+      <h5>Over 4,000 5-star reviews</h5>
     </div>
 
     <div class="item-3">
-      <h2>Schedule to <br>social media.</h2>
-      <img src="./assets/images/illustration-schedule-posts.webp" style="width: 220px;" alt="illustration-schedule-posts">
+      <h2>Schedule to<br>social media.</h2>
+      <img src="./assets/images/illustration-schedule-posts.webp">
       <p>Optimize post timings to publish content at the perfect time for your audience.</p>
     </div>
 
     <div class="item-4">
-      <h1>Write your content <br> using AI.</h1>
-      <img src="./assets/images/illustration-ai-content.webp" style="width: 200px" alt="illustration-ai-content">
+      <h1>Write your content<br>using AI.</h1>
+      <img src="./assets/images/illustration-ai-content.webp" width="200">
     </div>
 
     <div class="item-5">
-      <img src="./assets/images/illustration-multiple-platforms.webp" style="width: 200px;" alt="illustration-multiple-platforms">
-      <h2>Manage <br>multiple accounts and platforms.</h2>
+      <img src="./assets/images/illustration-multiple-platforms.webp" width="200">
+      <h2>Manage multiple accounts and platforms.</h2>
     </div>
 
     <div class="item-6">
-      <h2>Maintain a consistent<br> posting <br> schedule.</h2>
-      <img src="./assets/images/illustration-consistent-schedule.webp" style="width: 180px;" alt="illustration-consistent-schedule">
+      <h2>Maintain a consistent<br>posting schedule.</h2>
+      <img src="./assets/images/illustration-consistent-schedule.webp" width="180">
     </div>
 
     <div class="item-7">
-      <h1><span>›56%</span></h1>
+      <h1>›56%</h1>
       <p>faster audience growth</p>
-      <img src="./assets/images/illustration-audience-growth.webp" style="width: 150px;" alt="illustration-audience-growth">
+      <img src="./assets/images/illustration-audience-growth.webp" width="150">
     </div>
 
     <div class="item-8">
-      <img src="./assets/images/illustration-grow-followers.webp" style="width:180px;" alt="illustration-grow-followers">
-      <h2>Grow followers <br>with non-stop <br>content.</h2>
+      <img src="./assets/images/illustration-grow-followers.webp" width="180">
+      <h2>Grow followers<br>with non-stop content.</h2>
     </div>
-  </div>
 
+  </div>
 </body>
 </html>
